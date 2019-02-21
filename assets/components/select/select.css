@@ -1,0 +1,14 @@
+#searchBox{
+  width: 20vw;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.create{
+  margin-left: 1vw;
+}
