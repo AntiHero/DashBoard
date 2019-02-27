@@ -86,6 +86,133 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./assets/components/colors/colors.js":
+/*!********************************************!*\
+  !*** ./assets/components/colors/colors.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _table_table__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../table/table */ "./assets/components/table/table.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @material-ui/core/styles */ "./node_modules/@material-ui/core/styles/index.js");
+/* harmony import */ var _material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @material-ui/core/Table */ "./node_modules/@material-ui/core/Table/index.js");
+/* harmony import */ var _material_ui_core_Table__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @material-ui/core/TableBody */ "./node_modules/@material-ui/core/TableBody/index.js");
+/* harmony import */ var _material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @material-ui/core/TableCell */ "./node_modules/@material-ui/core/TableCell/index.js");
+/* harmony import */ var _material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @material-ui/core/TableRow */ "./node_modules/@material-ui/core/TableRow/index.js");
+/* harmony import */ var _material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material-ui/core/Paper */ "./node_modules/@material-ui/core/Paper/index.js");
+/* harmony import */ var _material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
+
+
+
+
+
+
+
+
+
+var styles = function styles(theme) {
+  return {
+    root: {
+      width: '20vw',
+      height: '100%',
+      marginTop: '50px',
+      overflowX: 'hidden'
+    },
+    cell: {
+      width: '100px'
+    }
+  };
+};
+
+function Colors(props) {
+  var classes = props.classes;
+  return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_6___default.a, {
+    className: classes.root
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_Table__WEBPACK_IMPORTED_MODULE_2___default.a, {
+    className: classes.table
+  }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableBody__WEBPACK_IMPORTED_MODULE_3___default.a, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_5___default.a, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    className: classes.cell,
+    style: {
+      backgroundColor: "".concat(_table_table__WEBPACK_IMPORTED_MODULE_0__["colors"].checked)
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    className: classes.cell,
+    style: {
+      backgroundColor: 'gray'
+    },
+    align: "center"
+  }, 'Checked')), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_5___default.a, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    style: {
+      backgroundColor: "".concat(_table_table__WEBPACK_IMPORTED_MODULE_0__["colors"].checking)
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    style: {
+      backgroundColor: 'gray'
+    },
+    align: "center"
+  }, 'Need to be checked')), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_5___default.a, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    style: {
+      backgroundColor: "".concat(_table_table__WEBPACK_IMPORTED_MODULE_0__["colors"].todo)
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    style: {
+      backgroundColor: 'gray'
+    },
+    align: "center"
+  }, 'To Do')), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_5___default.a, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    style: {
+      backgroundColor: "".concat(_table_table__WEBPACK_IMPORTED_MODULE_0__["colors"].wasted)
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    style: {
+      backgroundColor: 'gray'
+    },
+    align: "center"
+  }, 'Wasn\'t solved')), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableRow__WEBPACK_IMPORTED_MODULE_5___default.a, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    style: {
+      backgroundColor: "".concat(_table_table__WEBPACK_IMPORTED_MODULE_0__["colors"].working)
+    }
+  }), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_4___default.a, {
+    component: "th",
+    scope: "row",
+    style: {
+      backgroundColor: 'gray'
+    },
+    align: "center"
+  }, 'Student is working on')))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_1__["withStyles"])(styles)(Colors));
+
+/***/ }),
+
 /***/ "./assets/components/select/select.css":
 /*!*********************************************!*\
   !*** ./assets/components/select/select.css ***!
@@ -307,7 +434,8 @@ var styles = function styles(theme) {
     root: {
       width: '91vw',
       height: '100%',
-      marginTop: '100px',
+      marginTop: '50px',
+      marginBottom: '100px',
       overflowX: 'hidden'
     },
     table: {
@@ -360,7 +488,6 @@ function createMarks(name) {
   }
 
   tasks = createTaskList(_data_score_json__WEBPACK_IMPORTED_MODULE_10__);
-  console.log(tasks);
   var taskList = [];
 
   for (var i = 0; i < tasks.length; i++) {
@@ -429,14 +556,10 @@ function createMarks(name) {
 
     statuses.push(createStatus(taskList));
   }
-
-  console.log(statuses[0]);
 }
 
 function SimpleTable(props) {
   var classes = props.classes;
-  console.log(props.mentor);
-  console.log(props.mentorsGit);
   createMarks(props.mentor);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default.a, {
     className: classes.root
@@ -535,12 +658,14 @@ module.exports = [["https://github.com/Artsiom-Zhuk","Code Jam \"CoreJS\"","http
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_select_select_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/select/select.js */ "./assets/components/select/select.js");
 /* harmony import */ var _components_table_table__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/table/table */ "./assets/components/table/table.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/data/mentors.json */ "./assets/data/mentors.json");
-var _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/data/mentors.json */ "./assets/data/mentors.json", 1);
+/* harmony import */ var _components_colors_colors__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/colors/colors */ "./assets/components/colors/colors.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../assets/data/mentors.json */ "./assets/data/mentors.json");
+var _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_5___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/data/mentors.json */ "./assets/data/mentors.json", 1);
+
 
 
 
@@ -554,7 +679,7 @@ document.addEventListener('DOMContentLoaded', function () {
   button.addEventListener('click', function () {
     name = localStorage.getItem('userSelect');
     mentorsGitHub = getGitHub(name);
-    react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_table_table__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.render(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_table_table__WEBPACK_IMPORTED_MODULE_1__["default"], {
       mentor: name,
       mentorsGit: mentorsGitHub
     }), window.document.getElementById('table'));
@@ -562,10 +687,9 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 function getGitHub(name) {
-  for (var key in _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_4__) {
+  for (var key in _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_5__) {
     if (key === name) {
-      mentorsGitHub = _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_4__[key].github;
-      console.log('yes');
+      mentorsGitHub = _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_5__[key].github;
       break;
     }
   }
@@ -573,8 +697,9 @@ function getGitHub(name) {
   return mentorsGitHub;
 }
 
-react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_select_select_js__WEBPACK_IMPORTED_MODULE_0__["default"], null), window.document.getElementById('search'));
-react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_table_table__WEBPACK_IMPORTED_MODULE_1__["default"], {
+react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.render(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_select_select_js__WEBPACK_IMPORTED_MODULE_0__["default"], null), window.document.getElementById('search'));
+react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.render(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_colors_colors__WEBPACK_IMPORTED_MODULE_2__["default"], null), window.document.getElementById('colors'));
+react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.render(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_table_table__WEBPACK_IMPORTED_MODULE_1__["default"], {
   mentor: name,
   mentorsGit: mentorsGitHub
 }), window.document.getElementById('table'));
