@@ -11,7 +11,7 @@ import mentors from '../../data/mentors.json';
 import score from '../../data/score.json';
 import _ from 'lodash';
 
-const colors = {
+export const colors = {
   checked: '#b5e7a0',
   todo: '#d9d9d9',
   working: 'yellow',
@@ -20,12 +20,14 @@ const colors = {
 }
 
 const color = colors.notChked;
+const url = "https://github.com/"
 
 const styles = theme => ({
   root: {
     width: '91vw',
     height: '100%',
-    marginTop: '100px',
+    marginTop: '50px',
+    marginBottom: '100px',
     overflowX: 'hidden',
   },
   table: {
@@ -137,7 +139,6 @@ function createMarks(name) {
     }
     statuses.push(createStatus(taskList));
   }
-  console.log(statuses[0]);
 }
 
 
@@ -145,14 +146,13 @@ function createMarks(name) {
 function SimpleTable(props) {
   const { classes } = props;
 
-  console.log(props.mentor);
   createMarks(props.mentor);
   return (
     <Paper className={classes.root}>
       <Table className={classes.table}>
         <TableHead>
           <TableRow style={{backgroundColor:'gray'}}>
-            <TableCell align="center" style={{backgroundColor:'violet', color: 'white'}}>{props.mentor}</TableCell>
+              <TableCell align="center" style={{backgroundColor:'violet', color: 'white'}}><a href={props.mentorsGit} style={{color:'white'}}>{props.mentor}</a></TableCell>
             {tasks.map((task, index) => (
               <TableCell align="center" style={{color:'white', borderLeft: '1px solid white'}} key={index}>{task}</TableCell>
             ))}
@@ -162,7 +162,7 @@ function SimpleTable(props) {
           {students.map((student, index) => (
             <TableRow key={student.id}>
               <TableCell component="th" scope="row" style={{border: '1px solid gray'}}>
-                {student.name}
+                <a href={`${url}` + `${student.name}`} style={{color: 'black'}}>{student.name}</a>
               </TableCell>
               {statuses[index].map((status, index) => (
                   <TableCell align="center" style={{backgroundColor:`${status}`, border: '1px solid gray'}} key={`status${index}`}></TableCell>
@@ -177,7 +177,8 @@ function SimpleTable(props) {
 
 SimpleTable.propTypes = {
   classes: PropTypes.object.isRequired,
-  mentor: PropTypes.string.isRequired
+  mentor: PropTypes.string.isRequired,
+  mentorsGit: PropTypes.string.isRequired,
 };
 
 export default withStyles(styles)(SimpleTable);

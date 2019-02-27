@@ -10,3 +10,9 @@
   justify-content: center;
   align-content: center;
 }
+
+#colors{
+  display:flex;
+  justify-content: center;
+  align-content: center;
+}

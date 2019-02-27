@@ -242,11 +242,12 @@ function (_React$Component) {
 /*!******************************************!*\
   !*** ./assets/components/table/table.js ***!
   \******************************************/
-/*! exports provided: default */
+/*! exports provided: colors, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "colors", function() { return colors; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
@@ -299,6 +300,7 @@ var colors = {
   wasted: 'red'
 };
 var color = colors.notChked;
+var url = "https://github.com/";
 
 var styles = function styles(theme) {
   return {
@@ -434,6 +436,7 @@ function createMarks(name) {
 function SimpleTable(props) {
   var classes = props.classes;
   console.log(props.mentor);
+  console.log(props.mentorsGit);
   createMarks(props.mentor);
   return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_Paper__WEBPACK_IMPORTED_MODULE_8___default.a, {
     className: classes.root
@@ -449,7 +452,12 @@ function SimpleTable(props) {
       backgroundColor: 'violet',
       color: 'white'
     }
-  }, props.mentor), tasks.map(function (task, index) {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+    href: props.mentorsGit,
+    style: {
+      color: 'white'
+    }
+  }, props.mentor)), tasks.map(function (task, index) {
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5___default.a, {
       align: "center",
       style: {
@@ -467,7 +475,12 @@ function SimpleTable(props) {
       style: {
         border: '1px solid gray'
       }
-    }, student.name), statuses[index].map(function (status, index) {
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+      href: "".concat(url) + "".concat(student.name),
+      style: {
+        color: 'black'
+      }
+    }, student.name)), statuses[index].map(function (status, index) {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_material_ui_core_TableCell__WEBPACK_IMPORTED_MODULE_5___default.a, {
         align: "center",
         style: {
@@ -482,7 +495,8 @@ function SimpleTable(props) {
 
 SimpleTable.propTypes = {
   classes: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object.isRequired,
-  mentor: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
+  mentor: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired,
+  mentorsGit: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.string.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (Object(_material_ui_core_styles__WEBPACK_IMPORTED_MODULE_2__["withStyles"])(styles)(SimpleTable));
 
@@ -525,23 +539,44 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../assets/data/mentors.json */ "./assets/data/mentors.json");
+var _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_4___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../assets/data/mentors.json */ "./assets/data/mentors.json", 1);
+
 
 
 
 
 var name = localStorage.getItem('userSelect');
+var mentorsGitHub = getGitHub(name);
+;
 document.addEventListener('DOMContentLoaded', function () {
   var button = document.getElementsByTagName('Button')[0];
   button.addEventListener('click', function () {
     name = localStorage.getItem('userSelect');
+    mentorsGitHub = getGitHub(name);
     react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_table_table__WEBPACK_IMPORTED_MODULE_1__["default"], {
-      mentor: name
+      mentor: name,
+      mentorsGit: mentorsGitHub
     }), window.document.getElementById('table'));
   });
 });
+
+function getGitHub(name) {
+  for (var key in _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_4__) {
+    if (key === name) {
+      mentorsGitHub = _assets_data_mentors_json__WEBPACK_IMPORTED_MODULE_4__[key].github;
+      console.log('yes');
+      break;
+    }
+  }
+
+  return mentorsGitHub;
+}
+
 react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_select_select_js__WEBPACK_IMPORTED_MODULE_0__["default"], null), window.document.getElementById('search'));
 react_dom__WEBPACK_IMPORTED_MODULE_3___default.a.render(react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_table_table__WEBPACK_IMPORTED_MODULE_1__["default"], {
-  mentor: name
+  mentor: name,
+  mentorsGit: mentorsGitHub
 }), window.document.getElementById('table'));
 
 /***/ }),
