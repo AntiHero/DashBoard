@@ -75,7 +75,6 @@ function createMarks(name) {
   }
 
   tasks = createTaskList(score);
-  console.log(tasks)
 
   let taskList = [];
 
